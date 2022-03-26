@@ -1,50 +1,63 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Personas and Pathways for Growing Communities</title>
+    <title>Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="icon" type="image/ico" href="https://mozillascience.org/img/favicon.ico">
-
+    <link rel="stylesheet/less" href="/assets/css/style-dev.less">
+    <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <script src="/assets/javascript/less.js" type="text/javascript"></script>
   </head>
 
   <body>
     <aside>
       <div class="image">
-        <img src="../assets/images/science-fox.svg">
+        <img src="/assets/images/home-icon.png">
       </div>
       <nav>
-        <a class="selected" href="#introduction">Introduction</a>
-        <a href="#steps-to-complete">Steps to Complete</a>
-        <a href="#glossary">Glossary</a>
-        <a href="#resources">Resources</a>
+        <a href="/index.html#welcome">Welcome</a>
+        <a href="/index.html#parking">Parking</a>
+        <a class="selected" href="/index.html#manuals">Manuals</a>
+        <a href="/index.html#attractions">Attractions</a>
+        <a href="/index.html#help">Help</a>
       </nav>
     </aside>
-
     <article>
-      <div class="logo">
-        <a href="https://mozillascience.org" title="Mozilla Science Lab">
-          <img src="../assets/images/science-lab-logo.svg" />
-        </a>
+      <div class="banner">
+          <img id="manuals" src="/assets/images/banner-houseplants.jpg" />
       </div>
-
-      <h1>Personas and Pathways for Growing Communities</h1>
+      <p>
+        <p>
+          <h2>Template</h2>
+        <p>
+      <p>
+        Even if they tell you otherwise (these plants can be sneaky) our plantcare contractor suggests not watering the plants. She visits at regular intervals to keep each varity happy, fed, and watered appropriately.
+      </p>
+      <p>
+        From time to time there may be a "mishap" with one of the plants indoors. Please do your best to place any soil back into pot and let us know as soon as you're able... We'll get a call into the plant lady stat!
+      </p>
 
       <div class="meta-information">
         <p class="summary">
-          This activity is designed to help you identify potential users and contributors,
-          understand their goals and motivations, help them find a way into your project,
-          and grow them into strong, committed community members.
+          NOTE: An important message goes here.
         </p>
-        <div class="details">
-          <time>45 to 60 minutes</time>
-          <p class="difficulty">For beginners</p>
-        </div>
       </div>
 
       <section class="presentation-details">
@@ -244,7 +257,7 @@
           file in light of your new understanding of your users.
         </li>
         <li>
-          You may also want to revise your proejct description to better appeal to your users, using this handout.
+          You may also want to revise your project description to better appeal to your users, using this handout.
         </li>
       </ul>
 
@@ -257,7 +270,7 @@
         </section>
       </section>
       -->
-
+      <p><a href="/index.html#manuals"><< Back</a></p>
     </article>
   </body>
 </html>

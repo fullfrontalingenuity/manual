@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!--<link rel="icon" type="image/ico" href="https://mozillascience.org/img/favicon.ico">-->
+    <link rel="stylesheet/less" href="/assets/css/style-dev.less">
+    <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <script src="/assets/javascript/less.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -27,21 +40,34 @@
     </aside>
     <article>
       <div class="banner">
-          <img id="welcome" src="assets/images/banner-paddleboard.jpg" />
+          <img id="welcome" src="assets/images/banner-paddleboard.png" />
       </div>
       <p>
         <h2>First and foremost - welcome!</h2>
         <p>
-          Enjoy a bottle of wine upon arrival. You'll find one of our favorite white wines on the counter, next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
-        </p>    
-        <p>
-          <h3>Guest WiFi SSID (network name) is:</h3><br>&nbsp;&nbsp;<code>Access permitted...</code>
-          <h3>The WPA2 password is:</h3><br>&nbsp;&nbsp;<code>easy-to-remember</code></h3>
+          Enjoy a bottle of wine upon arrival. You'll find one of our favorites on the counter, next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
         </p>
-        <p>
-          People preferring the verbal approach: it's "easy to remember" in lowercase with hyphens between words. 
-        </p>
-        </p>
+        <h3>WiFi</h3>
+        <br>
+        <section class="presentation-details">
+          <section>
+            <h4>Guest SSID:</h4>
+            <p>
+              <code>Access permitted...</code>
+            </p>
+            <p>There are a handful of other SSIDs present but this is the only guest network</p>
+          </section>
+  
+          <section>
+            <h4>WPA2 password:</h4>
+            <p>
+              <code>easy-to-remember</code>
+            </p>
+            <p>
+              It's &quot;easy to remember&quot; in lowercase with hyphens instead of spaces
+            </p>
+          </section>
+        </section>
       </p>
       <div class="meta-information">
         <p class="summary">
