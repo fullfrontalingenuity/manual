@@ -56,11 +56,31 @@ function scroll(){
     var windowTop = $(window).scrollTop();
     var offset = $(el).offset();
     var fromTop = offset.top - windowTop;
-    if(fromTop > 0 && fromTop < 400) {
+    if(fromTop > 0 && fromTop < 200) {
       var id = $(el).attr('id');
       id = id.toLowerCase().replace("#","");
       $("nav .selected").removeClass("selected");
       $("nav a[href=#"+id+"]").addClass("selected");
     }
   });
+}
+
+// Greeting v1.0.2
+//
+// * Display current time of day *
+// *  morning | afternoon | evening *
+
+const greeting = document.getElementById("greeting");
+const hour = new Date().getHours();
+const welcomeTypes = ["morning", "afternoon", "evening"];
+let welcomeText = "";
+
+function check_day_phase(){
+  if (hour < 12)
+    welcomeText = welcomeTypes[0];
+  else if (hour < 18)
+    welcomeText = welcomeTypes[1];
+  else
+    welcomeText = welcomeTypes[2];
+    document.getElementById("phase").innerHTML = welcomeText;
 }

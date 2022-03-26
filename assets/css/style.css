@@ -1,7 +1,7 @@
 /*
   Do not make manual changes to this stylesheet.
   To make style changes, edit the "style-dev.less" file while previewing the /dev_template/index.html file.
-  When you're ready, use http://lesscss.org/less-preview/ to compile the .less file into CSS and
+  When you're ready, use https://lesscss.org/less-preview/ to compile the .less file into CSS and
   replace the CSS below this message with the output.
   Note: for background images from the assets folder.. remove "assets" from the url() delaration
   This -    background: url(../assets/images/nav-selected-indicator.svg);
@@ -10,7 +10,7 @@
 
 body {
   font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0;
   margin: 0;
 }
@@ -42,7 +42,7 @@ h3 {
 h4 {
   color: #273D44;
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 p,
 li {
@@ -100,6 +100,8 @@ a:hover {
   height: auto;
   width: auto\9;
   /* ie8 */
+  margin-top: -180px;
+  margin-left: 240px;
 }
 .emoji {
   max-width: 32px;
@@ -420,7 +422,7 @@ nav a.selected:after {
 }
 .glossary .term h3 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: #273D44;
   margin: 0;
 }

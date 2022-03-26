@@ -15,11 +15,11 @@
 
 // Layout
 @aside-width: 230px;          // Width of the navigation side bar
-@base-font-size: 16px;        // Base font size for body copy
+@base-font-size: 20px;        // Base font size for body copy
 
 body {
   font-family: "Fira Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0;
   margin: 0;
 
@@ -58,7 +58,7 @@ h3 {
 h4 {
   color: @text-dark;
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 p, li {
@@ -111,7 +111,7 @@ a {
 }
 
 
-// The main conent wrapper
+// The banner image
 
 .banner {
   position: relative;
@@ -128,8 +128,9 @@ a {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+    margin-top: -180px;
+    margin-left: 240px;
   }
-
 }
 
 .emoji {
@@ -137,6 +138,8 @@ a {
   height: 32px;
   position: absolute;
 }
+
+// The main conent wrapper
 
 article {
   max-width: 750px;

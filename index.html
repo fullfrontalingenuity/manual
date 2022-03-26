@@ -3,19 +3,32 @@
   <head>
     <title>Welcome</title>
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.bunny.net/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!--<link rel="icon" type="image/ico" href="https://mozillascience.org/img/favicon.ico">-->
+    <link rel="stylesheet/less" href="/assets/css/style-dev.less">
+    <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/assets/javascript/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <script src="/assets/javascript/less.js" type="text/javascript"></script>
   </head>
-
-  <body>
+  <body onload="check_day_phase()">
     <aside>
       <div class="image">
-        <img src="assets/images/home-icon.png">
+        <img src="/assets/images/home-icon.png">
       </div>
       <nav>
         <a class="selected" href="#welcome">Welcome</a>
@@ -25,103 +38,203 @@
         <a href="#help">Help</a>
       </nav>
     </aside>
+    <div class="banner">
+      <img id="welcome" src="assets/images/banner-paddleboard.png" />
+    </div>
     <article>
-      <div class="banner">
-          <img id="welcome" src="assets/images/banner-paddleboard.jpg" />
-      </div>
       <p>
-        <h2>First and foremost - welcome!</h2>
+        <h2 id="welcome">First and foremost: Welcome Margaret and company!</h2>
         <p>
-          Feel free to enjoy a bottle of wine upon arrival. You'll find one of our favorite white wines on the counter, next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
-        </p>    
+          Good <label id="phase"></label>! Enjoy a bottle of wine during your stay... You'll find one of our favorites on the counter next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
+        </p>
+        <h3>WiFi</h3>
+        <br>
+        <section class="presentation-details">
+          <section>
+            <h4>Guest SSID:</h4>
+            <p>
+              <code>Access permitted...</code>
+            </p>
+            <p>There are a handful of other SSIDs present but this is the only guest network</p>
+          </section>
+  
+          <section>
+            <h4>WPA2 password:</h4>
+            <p>
+              <code>easy-to-remember</code>
+            </p>
+            <p>
+              It's &quot;easy to remember&quot; in lowercase with hyphens instead of spaces
+            </p>
+          </section>
+        </section>
+        <div class="meta-information">
+          <p class="summary">
+            NOTE: In rural locations such as this, reliable/fast (i.e. "good") broadband is scarce. At the moment we're balancing <a href="https://www.starlink.com/">StarLink</a> satellite-based Internet &amp; AT&T's LTE network... It <i>works</i> but isn't ideal if everyone's streaming at the same time. An FTTP (fibre to the premises) <a href="https://www.pieg.com/fiber-internet/">solution</a> is planned sometime in 2023. Bear with us.&nbsp;&nbsp;<img src="assets/images/bear.png" />
+          </p>
+        </div>
+        <h3>Lawncare and landscaping</h3>
+        <br>
         <p>
-          <h3>Guest WiFi SSID (network name) is:</h3><br>&nbsp;&nbsp;<code>Access permitted...</code>
-          <h3>The WPA2 password is:</h3><br>&nbsp;&nbsp;<code>easy-to-remember</code></h3>
+          The mowing duo visits weekly, early in the morning, on Wednesday or Thursday. Depending on weather.
         </p>
         <p>
-          If a member of your party prefers the verbal approach, it's the words "easy to remember" in lowercase with hyphens between words. 
+          Josh, our landscaping contractor visits on the same schedule every two weeks.
         </p>
+        <p>  
+          They're quick, efficient and shouldn't interrupt anything you have planned. If there is  a conflict, or you'd prefer they not stop by while you're at the home  please let us know. Rescheduling shouldn't be an obstacle.
+        </p>
+        <h3>Trash removal</h3>
+        <br>
+        <p>
+          GFL comes Wednesday (Thursday if a holiday occurs Monday-Wednesday) between 5P and 7P Eastern. If you have trash to dispose of, put it in the large rolling trash can at garage entry stairs. Roll it out to the road on opposite side of driveway from mailbox. Once emptied, return to original location in garage.
+        </p>
+        <p>
+          There should be plenty of 42-gallon trash bags on "ladder" to garage attic. If you end up running low (or out) of bags, let us know in the app and another box will appear like magic.
         </p>
       </p>
-      <div class="meta-information">
-        <p class="summary">
-          NOTE: In rural locations such as this, reliable/fast (i.e. "good") broadband is scarce. At the moment we're using AT&T's LTE network, it works but isn't ideal if everyone's streaming at the same time. A request for <a href="https://www.starlink.com/">StarLink</a> service has been "in" since 2020 but remains pending. Ultimately, a FTTP (fibre to the premises) <a href="https://www.pieg.com/fiber-internet/">solution</a> is planned sometime in 2023. Please bear with us.&nbsp;&nbsp;<img src="assets/images/bear.png" />
-        </p>
-      </div>
 
       <hr>
-      <!-- <div class="image">
-        <img src="http://i.imgur.com/CfugmWx.png" alt="decoration" height="90" width="770"> 
-      </div> -->
 
       <h2 id="parking">Parking</h2>
       <p>
-        You (and your guests too of course!) are welcome to park anywhere in the driveway including spots along south-east property line. If driveway isn't able to accomodate: temporary parking on either side of driveway on Canton is okay but it's important to be curtious to neighbors.
+        You (and your guests too of course!) are welcome to park anywhere in the driveway including spots along east property line. When driveway isn't able to accommodate, temporary daytime street parking on either side of driveway on Canton is okay... Just be courteous to neighbors, they're the best!
+      </p>
+      <p>
+        If you've made the trip in your Tesla, a <a href="manuals/tesla_charger/">Wall Connector</a> is installed in the garage that you're welcome to use.
       </p>
       <div class="meta-information">
         <p class="summary">
-          NOTE: Please, only foot traffic and golf cart on path to river.
+          NOTE: Only foot traffic and golf cart on path to river. Our golf cart path isn't able to support the weight of passenger vehicles and repairs are expensive.
         </p>
       </div>
       <hr>
-      <!-- <div class="image">
-        <img src="http://i.imgur.com/CfugmWx.png" alt="decoration" height="90" width="770"> 
-      </div> -->
       <h2 id="manuals">Manuals</h2>
       <p>
-        These impromptu "manuals" are provided to assist during your stay. If there's anything you found useless or noticed something missing that would've improved your experience -- please let us know! We'd appriciate the feedback.
+        These quick guides are provided to assist during your stay. If you've found a guide to be of little use or noticed something lacking that would improve your experience -- just let us know in the app! We appriciate the feedback.
       </p>
-
       <p><h3>Indoors</h3></p>
       <ol>
-        <li><strong><a href="checkin_and_checkout/">Check-in and check-out</a></strong></li>
-        <li><strong><a href="writing_readme/" target="_blank">Thermostat</a></strong></li>
-        <li><strong><a href="roadmapping/" target="_blank">Fireplace</a></strong></li>
-        <li><strong><a href="github_for_collaboration/" target="_blank">Kitchen appliances</a></strong></li>
-        <li><strong><a href="code_of_conduct/" target="_blank">Upstairs master bedroom and bathroom</a></strong> </li>
-        <li><strong><a href="sprints_events/" target="_blank">Downstairs bedroom and bathroom</a></strong></li>
-        <li><strong><a href="data_reuse/" target="_blank">Tesla charger</a></strong></li>
-        <li><strong><a href="houseplants/">Houseplants</a></strong></li>
+        <li><strong><a href="manuals/checkin_and_checkout/">Check-in and check-out</a></strong></li>
+        <li><strong><a href="manuals/thermostat/">Thermostat</a></strong></li>
+        <li><strong><a href="manuals/fireplace/">Fireplace</a></strong></li>
+        <li><strong><a href="manuals/kitchen_appliances/">Kitchen appliances</a></strong></li>
+        <li><strong><a href="manuals/laundry/">Laundry</a></strong></li>
+        <li><strong><a href="manuals/bedroom_upstairs_master/">Upstairs master bedroom</a></strong> </li>
+        <li><strong><a href="manuals/bedroom_downstairs/">Downstairs bedroom and bathroom</a></strong></li>
+        <li><strong><a href="manuals/tesla_charger/">Tesla charger</a></strong></li>
+        <li><strong><a href="manuals/houseplants/">Houseplants</a></strong></li>
+        <li><strong><a href="manuals/security_cameras/">Security cameras</a></strong></li>
       </ol>
       <p><h3>Outdoors</h3></p>
       <ol>
-        <li><strong><a href="contributing/" target="_blank">Grill on deck</a></strong></li>
-        <li><strong><a href="roadmapping/" target="_blank">Fire pit</a></strong></li>
-        <li><strong><a href="data_reuse/" target="_blank">Golf cart (if rented)</a></strong></li>
-        <li><strong><a href="data_reuse/" target="_blank">Ponton boat (if rented)</a></strong></li>
+        <li><strong><a href="manuals/grill/">Grill</a></strong></li>
+        <li><strong><a href="manuals/fire_pit/">Fire pit</a></strong></li>
+        <li><strong><a href="manuals/cart/">Golf cart (with signed waiver)</a></strong></li>
+        <li><strong><a href="manuals/pontoon/">Pontoon boat (if rented)</a></strong></li>
       </ol>
 
       <hr>
-      <!-- <div class="image">
-        <img src="http://i.imgur.com/CfugmWx.png" alt="decoration" height="90" width="770"> 
-      </div> -->
 
       <h2 id="attractions">Attractions</h2>
       <p>
-        Local attractions, in no particular order:
+        Local attractions, in no particular order but alphabetical:
       </p>
+      <h3><img width="28px" height="39px" style="vertical-align: middle;" src="assets/images/pin.svg" />&nbsp;Brewery/meadery</h3>
+      <br>
+      <section class="presentation-details">
+        <section>
+          <h4>Cheboygan Brewing Company</h4>
+          <p>101 N Main Street<br>Cheboygan, MI 49721<br>+1 (231) 268-3218</p>
+        </section>
+        <section>
+          <h4>Hive North</h4>
+          <p>100 S Main Street<br>Cheboygan, MI 49721<br>+1 (231) 268-3133</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h4>Petoskey Brewing</h4>
+          <p>1844 Harbor-Petoskey Road<br>Petoskey, MI 49770<br>+1 (231) 753-2057</p>
+        </section>
+      </section>
 
-      <ul>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-        <li>Cheboygan Brewing Company - 1234 Main Street, Anytown, MI 49721</li>
-      </ul>
+      <h3><img width="28px" height="39px" style="vertical-align: middle;" src="assets/images/pin.svg" />&nbsp;Coffee</h3>
+      <br>
+      <section class="presentation-details">
+        <section>
+          <h4>Cheboygan Coffee Roasters - open this summer</h4>
+          <p>232 N Main Strreet<br>Cheboygan, MI 49721<br>TBD</p>
+        </section>
+        <section>
+          <h4>State Street Coffee</h4>
+          <p>211 W State Stret<br>Cheboygan, MI 49721<br>+1 (231) 597-9575</p>
+        </section>
+      </section>
 
-      <p>
-        Add more things!
-      </p>
+      <h3><img width="28px" height="39px" style="vertical-align: middle;" src="assets/images/pin.svg" />&nbsp;Dining</h3>
+      <br>
+      <section class="presentation-details">
+        <section>
+          <h4>Chateau at Black Mountain</h4>
+          <p>10621 Twin Lakes Road<br>Cheboygan, MI 49721<br>+1 (231) 625-9322</p>
+        </section>
+        <section>
+          <h4>Douglas Lake Bar &amp; Steakhouse</h4>
+          <p>100 S Main Street<br>Cheboygan, MI 49721<br>+1 (231) 268-3133</p>
+        </section>
+      </section>
+      <section class="presentation-details">
+        <section>
+          <h4>Duncan City Pizza</h4>
+          <p>630 S Main Strreet<br>Cheboygan, MI 49721<br>+1 (231) 597-5400</p>
+        </section>
+        <section>
+          <h4>Libby's Downtown</h4>
+          <p>411 N Main Street<br>Cheboygan, MI 49721<br>+1 (231) 445-9122</p>
+        </section>
+      </section>
+      <section class="presentation-details">
+        <section>
+          <h4>Michael's Tavern & Steakhouse</h4>
+          <p>4653 S Straits Highway<br>Indian River, MI 49749<br>+1 (231) 238-2137</p>
+        </section>
+        <section>
+          <h4>Table 231</h4>
+          <p>11283 N Straits Highway<br>Cheboygan, MI 49721<br>+1 (888) 337-6354</p>
+        </section>
+      </section>
+      <h3><img width="28px" height="39px" style="vertical-align: middle;" src="assets/images/pin.svg" />&nbsp;Pub</h3>
+      <br>
+      <section class="presentation-details">
+        <section>
+          <h4>Beau est Beau</h4>
+          <p>220 N Main Street<br>Cheboygan, MI 49721<br>+1 (231) 268-3280</p>
+        </section>
+        <section>
+          <h4>Nauti Inn</h4>
+          <p>330 N Main Street<br>Cheboygan, MI 49721<br>+1 (231) 668-8250</p>
+        </section>
+      </section>
+      <section class="presentation-details">
+        <section>
+          <h4>Queen's Head</h4>
+          <p>250 N Huron Street<br>Cheboygan, MI 49721<br>+1 (231) 445-7101</p>
+        </section>
+        <section>
+          <h4>White Buffalo</h4>
+          <p>312 E Central Avenue<br>Mackinaw City, MI 49701<br>+1 (231) 436-6104</p>
+        </section>
+      </section>
+
+      <div class="meta-information">
+        <p class="summary">
+          NOTE: Feel free to ask about other local events and attractions through the app.
+        </p>
+      </div>
 
       <hr>
-      <!-- <div class="image">
-        <img src="http://i.imgur.com/CfugmWx.png" alt="decoration" height="90" width="770"> 
-      </div> -->
+
       <h2 id="help">Help</h2>
 
       <ol class="steps">
@@ -155,24 +268,43 @@
           <ul>
             <li>
               <h2>Cheboygan County Sheriff</h2>
-              <p>231-123-4567</p>
+              <p>+1 (231) 627-3155</p>
             </li>
             <li>
               <h2>Michigan State Police</h2>
-              <p>231-123-4567</p>
+              <p>+1 (231) 627-9973</p>
             </li>
             <li>
-              <h2>Fire Department</h2>
-              <p>231-123-4567</p>
+              <h2>Alverno Fire Department</h2>
+              <p>+1 (231) 625-8524</p>
             </li>
           </ul>
         </li>
         <!-- Step 3 -->
         <li>
-          <h1>Anything else</h1>
+          <h1>Weather</h1>
           <p>
-          For everything from food recommendations, local events, to questions about the property or area; just reach out using the app! I typically respond instantly and <strong>always</strong> happy to help out... 
+
+            <a class="weatherwidget-io" style="pointer-events: none;" onclick="return false;" href="https://forecast7.com/en/45d58n84d43/49721/?unit=us" data-label_1="Cheboygan" data-theme="pure" >Cheboygan</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+            <br>
+            <a class="weatherwidget-io" style="pointer-events: none;" onclick="return false;" href="https://forecast7.com/en/45d43n84d99/harbor-springs/?unit=us" data-label_1="Harbor Springs" data-theme="pure" >Harbor Springs</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+            <br>
+            <a class="weatherwidget-io" style="pointer-events: none;" onclick="return false;" href="https://forecast7.com/en/44d76n85d62/traverse-city/?unit=us" data-label_1="Traverse City" data-theme="pure" >Traverse City</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
           </p>
+        </li>
+        <!-- Step 4 -->
+        <li>
+          <h1>Practically anything else</h1>
+          <p>For food recommendations, trail information, local events, questions about the property or surrounding area; just reach out using the app! We're <strong>always</strong> happy to help out.</p>
         </li>
       </ol>
 
