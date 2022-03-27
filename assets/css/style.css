@@ -100,7 +100,8 @@ a:hover {
   height: auto;
   width: auto\9;
   /* ie8 */
-  margin-top: 0px;
+  margin-top: -180px;
+  margin-left: 240px;
 }
 .emoji {
   max-width: 32px;

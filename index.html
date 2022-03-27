@@ -24,11 +24,10 @@
     </script>
     <script src="/assets/javascript/less.js" type="text/javascript"></script>
   </head>
-
-  <body>
+  <body onload="check_day_phase()">
     <aside>
       <div class="image">
-        <img src="assets/images/home-icon.png">
+        <img src="/assets/images/home-icon.png">
       </div>
       <nav>
         <a class="selected" href="#welcome">Welcome</a>
@@ -38,14 +37,14 @@
         <a href="#help">Help</a>
       </nav>
     </aside>
+    <div class="banner">
+      <img id="welcome" src="assets/images/banner-paddleboard.png" />
+    </div>
     <article>
-      <div class="banner">
-          <img id="welcome" src="assets/images/banner-paddleboard.png" />
-      </div>
       <p>
-        <h2>First and foremost - welcome Railton family!</h2>
+        <h2 id="welcome">First and foremost: <br> Good <label id="phase"></label>, welcome Railton family!</h2>
         <p>
-          Enjoy a bottle of wine upon arrival. You'll find one of our favorites on the counter, next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
+          Enjoy a bottle of wine upon arrival... You'll find one of our favorites on the counter, next to refrigerator.&nbsp;&nbsp;<img class="emoji" src="assets/images/wine.png" />
         </p>
         <h3>WiFi</h3>
         <br>
@@ -71,7 +70,7 @@
       </p>
       <div class="meta-information">
         <p class="summary">
-          NOTE: In rural locations such as this, reliable/fast (i.e. "good") broadband is scarce. At the moment we're using AT&T's LTE network, it works but isn't ideal if everyone's streaming at the same time. A request for <a href="https://www.starlink.com/">StarLink</a> service has been "in" since 2020 but remains pending. An FTTP (fibre to the premises) <a href="https://www.pieg.com/fiber-internet/">solution</a> is planned sometime in 2023. Please bear with us.&nbsp;&nbsp;<img src="assets/images/bear.png" />
+          NOTE: In rural locations such as this, reliable/fast (i.e. "good") broadband is scarce. At the moment we're using AT&T's LTE network... It <i>works</i> but isn't ideal if everyone's streaming at the same time. A request for <a href="https://www.starlink.com/">StarLink</a> service has been "in" since 2020 but remains pending. An FTTP (fibre to the premises) <a href="https://www.pieg.com/fiber-internet/">solution</a> is planned sometime in 2023. Please bear with us.&nbsp;&nbsp;<img src="assets/images/bear.png" />
         </p>
       </div>
 
@@ -79,7 +78,10 @@
 
       <h2 id="parking">Parking</h2>
       <p>
-        You (and your guests too of course!) are welcome to park anywhere in the driveway including spots along south-east property line. If driveway isn't able to accomodate: temporary parking on either side of driveway on Canton is okay but it's important to be courteous to neighbors.
+        You (and your guests too of course!) are welcome to park anywhere in the driveway including spots along east property line. When driveway isn't able to accomodate, temporary daytime street parking on either side of driveway on Canton is okay... Just be courteous to neighbors, they're the best!
+      </p>
+      <p>
+        If you've made the trip in a Tesla, a <a href="manuals/tesla_charger/">Wall Connector</a> is installed in the garage that you're welcome to use.
       </p>
       <div class="meta-information">
         <p class="summary">
@@ -91,7 +93,7 @@
 
       <h2 id="manuals">Manuals</h2>
       <p>
-        These impromptu "manuals" are provided to assist during your stay. If there's anything you found useless or noticed something missing that would've improved your experience -- please let us know! We'd appriciate the feedback.
+        These guides are provided to assist during your stay. If there's anything you found of litle use or noticed something missing that would've improved your experience -- please let us know! We'd appriciate the feedback.
       </p>
 
       <p><h3>Indoors</h3></p>
@@ -102,7 +104,7 @@
         <li><strong><a href="manuals/kitchen_appliances/">Kitchen appliances</a></strong></li>
         <li><strong><a href="manuals/code_of_conduct/" target="_blank">Upstairs master bedroom and bathroom</a></strong> </li>
         <li><strong><a href="manuals/sprints_events/" target="_blank">Downstairs bedroom and bathroom</a></strong></li>
-        <li><strong><a href="manuals/data_reuse/" target="_blank">Tesla charger</a></strong></li>
+        <li><strong><a href="manuals/tesla_charger/">Tesla charger</a></strong></li>
         <li><strong><a href="manuals/houseplants/">Houseplants</a></strong></li>
       </ol>
       <p><h3>Outdoors</h3></p>
@@ -208,7 +210,7 @@
 
       <div class="meta-information">
         <p class="summary">
-          NOTE: If you've followed advice from here and were disappointed, please share in a PM in the app to let us know! When something goes sideways with one of our recommendations, we pay careful attention.
+          NOTE: Feel free to ask about other local events and attractions through the app.
         </p>
       </div>
 
