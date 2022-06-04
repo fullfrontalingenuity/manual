@@ -65,6 +65,11 @@ function scroll(){
   });
 }
 
+// Greeting v1.0.2
+//
+// * Display current time of day *
+// *  morning | afternoon | evening *
+
 const greeting = document.getElementById("greeting");
 const hour = new Date().getHours();
 const welcomeTypes = ["morning", "afternoon", "evening"];
